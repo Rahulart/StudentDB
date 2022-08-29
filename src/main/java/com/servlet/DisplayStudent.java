@@ -39,18 +39,34 @@ public class DisplayStudent extends HttpServlet {
 			
 			PrintWriter out = response.getWriter();
 			response.setContentType("text/html");
-			out.println("<html><body>");
+			out.println("<html><head>");
+			out.println("<style>h2{\r\n"
+					+ "	margin-top: 5rem;\r\n"
+					+ "	text-align: center;\r\n"
+					+ "}\r\n"
+					+ "table{\r\n"
+					+ "	margin: 0.5rem auto;\r\n"
+					+ "	margin-top: 3rem;\r\n"
+					+ "	border-collapse: collapse;\r\n"
+					+ "}\r\n"
+					+ "th,td{\r\n"
+					+ "	border: 1px solid #000000;\r\n"
+					+ "	padding: 0.6rem;\r\n"
+					+ "}</style>");
+			out.println("</head><body>");
 			out.println("<table>");
-			out.println("<tr><th>Id</th><th>Name</th><th>Email</th><th>Phone no.</th></tr>");
+			out.println("<tr><th>Id</th><th>Name</th><th>Email</th><th>Phone no.</th><th>Deptartment</th><th>Gender</th>");
 			
 			while(rs.next()) {
 				int id=rs.getInt("id");
 				String uname=rs.getString("uname");
 				String email=rs.getString("email");
 				int phoneNo=rs.getInt("phoneNo");
+				String dept=rs.getString("dept");
+				String gender=rs.getString("gender");
 //				System.out.println(uname);
 				
-				out.println("<tr><td>"+id+"</td><td>"+uname+"</td><td>"+email+"</td><td>"+phoneNo+"</td></tr>");
+				out.println("<tr><td>"+id+"</td><td>"+uname+"</td><td>"+email+"</td><td>"+phoneNo+"</td><td>"+dept+"</td><td>"+gender+"</td></tr>");
 //				out.println(id);
 //				break;
 				

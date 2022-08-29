@@ -35,10 +35,12 @@ public class InsertStudent extends HttpServlet {
 		
 		try {
 			Connection con = DatabaseConnection.initializeDatabase();
-			PreparedStatement pst = con.prepareStatement("insert into studentdetails(uname,email,phoneNo) values(?,?,?)");
+			PreparedStatement pst = con.prepareStatement("insert into studentdetails(uname,email,phoneNo,dept,gender) values(?,?,?,?,?)");
 			pst.setString(1, request.getParameter("uname"));
 			pst.setString(2, request.getParameter("email"));
 			pst.setInt(3, Integer.parseInt(request.getParameter("phoneNo")));
+			pst.setString(4, request.getParameter("dept"));
+			pst.setString(5, request.getParameter("gender"));
 			
 			pst.executeUpdate();
 			

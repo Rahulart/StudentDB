@@ -2,6 +2,28 @@
 <head>
     <meta charset="ISO-8859-1">
     <title>Student details</title>
+    <style>
+    	table{
+			margin: 0.5rem auto;
+		    margin-top: 3rem;
+		}
+		
+		h2 {
+		    margin-top: 5rem;
+			text-align: center;
+		}
+		
+		span {
+		    display: flex;
+		    justify-content: center;
+		}
+		
+		label.required::after {
+		    content: '*';
+		    margin-right: 4px;
+		    color: red;
+		  }
+    </style>
 </head>
 <body>
     <div>
@@ -13,22 +35,44 @@
             <tr>
                 <td><label class="required"><b>Name:</b></label></td>
                 <td>
-                    <input type="text" id="names" name="uname" pattern="[A-Za-z]+"/>
+                    <input type="text" id="names" name="uname" pattern="[A-Za-z]+" required/>
                 </td>
             </tr>
             <tr>
                 <td><label class="required"><b>Email:</b></label></td>
                 <td>
-                    <input type="email" id="email" name="email"/>
+                    <input type="email" id="email" name="email" required/>
                 </td>
             </tr>
             <tr>
                 <td><label class="required"><b>Phone No.:</b></label></td>
                 <td>
-                    <input type="tel" id="phoneNo" name="phoneNo" minlength="5" pattern="[0-9]+"/>
+                    <input type="tel" id="phoneNo" name="phoneNo" minlength="5" pattern="[0-9]+" required/>
                 </td>
             </tr>
-            
+            <tr>
+                <td><label class="required"><b>Department:</b></label></td>
+                <td>
+                    <select id="dept" name="dept" required>
+                        <option selected disabled>Select</option>
+                        <option value="ece">ECE</option>
+                        <option value="eee">EEE</option>
+                        <option value="cs">CS</option>
+                        <option value="it">IT</option>
+                        <option value="mechnical">Mechanical</option>
+                        <option value="manufacturing">Manufacturing</option>
+                    </select>
+                </td>
+            </tr>
+            <tr>
+                <td><label class="required"><b>Gender:</b></label></td>
+                <td>
+                    <label><input type="radio" id="male" name="gender" value="male">
+                    Male</label>
+                    <label><input type="radio" id="female" name="gender" value="female">
+                    Female</label><br>
+                </td>
+            </tr>
         </table>
         <br/>
         <span id="bttn">
