@@ -1,0 +1,42 @@
+<!DOCTYPE html>
+<head>
+    <meta charset="ISO-8859-1">
+    <title>Student details</title>
+</head>
+<body>
+    <div>
+    <h2>Student Details</h2>
+    
+    <form action="student" id="form" method="post">
+        
+        <table>
+            <tr>
+                <td><label class="required"><b>Name:</b></label></td>
+                <td>
+                    <input type="text" id="names" name="uname" pattern="[A-Za-z]+"/>
+                </td>
+            </tr>
+            <tr>
+                <td><label class="required"><b>Email:</b></label></td>
+                <td>
+                    <input type="email" id="email" name="email"/>
+                </td>
+            </tr>
+            <tr>
+                <td><label class="required"><b>Phone No.:</b></label></td>
+                <td>
+                    <input type="tel" id="phoneNo" name="phoneNo" minlength="5" pattern="[0-9]+"/>
+                </td>
+            </tr>
+            
+        </table>
+        <br/>
+        <span id="bttn">
+            <input type="submit" id="sbtn">&nbsp;&nbsp;
+            <input type="reset" id="rbtn">
+        </span>
+    </form>
+    
+    </div>
+    
+</body>
