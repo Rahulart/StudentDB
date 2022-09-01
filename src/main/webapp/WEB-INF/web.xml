@@ -25,8 +25,4 @@
     <servlet-name>DisplayStudent</servlet-name>
     <servlet-class>com.servlet.DisplayStudent</servlet-class>
   </servlet>
-  <servlet-mapping>
-    <servlet-name>DisplayStudent</servlet-name>
-    <url-pattern>/display</url-pattern>
-  </servlet-mapping>
 </web-app>
